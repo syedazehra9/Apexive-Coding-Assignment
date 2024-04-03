@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
+    <!--  This is the tree view of the modelled data  -->
     <record id="view_attendance_tree_inherit" model="ir.ui.view">
         <field name="name">hr.attendance.tree.inherit</field>
         <field name="model">hr.attendance</field>
@@ -14,6 +15,7 @@
         </field>
     </record>
 
+    <!--  This is the form view of the modelled data  -->
     <record id="hr_attendance_view_form_inherit" model="ir.ui.view">
         <field name="name">hr.attendance.form.inherit</field>
         <field name="model">hr.attendance</field>
@@ -27,6 +29,7 @@
         </field>
     </record>
 
+    <!--  This is the search view of the modelled data  -->
     <record id="hr_attendance_view_filter_inherit" model="ir.ui.view">
         <field name="name">hr_attendance_view_filter_inherit</field>
         <field name="model">hr.attendance</field>

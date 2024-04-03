@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- THIS CODE IS FOR LOADING DATA OR RECORDS  -->
 <templates id="template" xml:space="preserve">
     <t t-extend="HrAttendanceMyMainMenu">
         <t t-jquery="*[t-esc='widget.employee.name']" t-operation="after">

@@ -1,6 +1,35 @@
 odoo.define('hr_attendance_project.inherit_attendance', function (require) {
     "use strict";
 
+    /* JS CODE FOLLOWS BEST PRACTICES OF ODOO TO IMPLEMENT FRONTEND-SIDE ACTION
+    1. Modularization: The code is organized as an Odoo module and utilizes the odoo.define
+    method to define a new module named 'hr_attendance_project.inherit_attendance'.
+    This follows Odoo's recommended approach for structuring JavaScript code within modules.
+    2. Inheritance: The MyAttendances.include({}) method is used to extend the behavior
+    of the existing hr_attendance.my_attendances module. This allows the code to override
+    or add functionality to the existing frontend actions while keeping the original
+     functionality intact.
+     3. Events Handling: The code attaches event handlers to DOM elements using the events object.
+      This approach is recommended in Odoo for handling user interactions and updating the UI
+       dynamically.
+     4. RPC Calls: Remote Procedure Calls (RPCs) are used to communicate with the Odoo backend.
+      The _rpc method is employed to invoke server-side methods (get_attendance_projects and
+       attendance_manual) asynchronously, ensuring smooth interaction between the frontend and backend.
+     5. Error Handling: The code includes error handling logic to handle cases where required
+     information (project, project task, and description) is not provided by the user. It
+     displays a notification to the user indicating the missing information, which enhances
+     the user experience and helps prevent data inconsistencies.
+     6. Context Management: Context variables such as project_id, project_task_id, and
+     attend_description are passed along with RPC calls to provide additional information
+     to server-side methods. This allows the backend to perform actions based on the context
+      provided by the frontend.
+      7. Asynchronous Operations: Asynchronous programming techniques, such as using promises
+       (then()), are utilized to ensure that certain operations (e.g., fetching attendance projects)
+        do not block the UI thread, thereby maintaining a responsive user interface.
+     8. Variable Scoping: The code uses proper variable scoping to prevent conflicts and
+     ensure the correct context for variables like self, context, etc. This improves code
+     readability and maintainability.
+     */
     var MyAttendances = require('hr_attendance.my_attendances');
     var session = require('web.session');
 
